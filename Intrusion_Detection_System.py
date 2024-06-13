@@ -16,7 +16,8 @@ data2 = pd.read_csv(dataset2_path)
 
 # Combine datasets (assuming they have the same columns)
 data = pd.concat([data1, data2], ignore_index=True)
-
+head(data1)
+head(data2)
 # Separate features (all columns except "Label") and label ("Label")
 features = data.drop("Label", axis=1)
 label = data["Label"]
