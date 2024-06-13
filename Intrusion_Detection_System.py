@@ -18,6 +18,8 @@ data2 = pd.read_csv(dataset2_path)
 data = pd.concat([data1, data2], ignore_index=True)
 head(data1)
 head(data2)
+head(data)
+data.Label.value_counts()
 # Separate features (all columns except "Label") and label ("Label")
 features = data.drop("Label", axis=1)
 label = data["Label"]
